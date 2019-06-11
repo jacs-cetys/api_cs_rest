@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CRUD API Documentation</title>
+    <link href="_styl/base.css" rel="stylesheet" />
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th colspan="6">
+            <h3>TEACHERS API</h3>
+            <b>Returns json data about a teachers</b>
+            </th>
+        </tr>
+        <tr>
+            <th>Method</th>
+            <th>API</th>
+            <th>Description</th>
+            <th>Request Body</th>
+            <th>Response Code</th>
+            <th>Response Body</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/api/teachers</td>
+            <td>Get all teachers items</td>
+            <td>None</td>
+            <td>200</td>
+            <td>
+<pre><code>[
+    {
+        "id": 1,
+        "firstName": "Edwin",
+        "lastName": "Salinas",
+        "email": "edwin.salinas@cetys.mx"
+    }
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/api/teachers/{id}</td>
+            <td>Get a teacher item by ID</td>
+            <td>None</td>
+            <td>200</td>
+            <td>
+<pre><code>{
+    "id": 1,
+    "firstName": "Edwin",
+    "lastName": "Salinas",
+    "email": "edwin.salinas@cetys.mx"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/api/teachers</td>
+            <td>Add a new teacher item</td>
+            <td>
+<pre><code>{
+    "firstName": "Arnoldo",
+    "lastName": "Diaz",
+    "email": "arnoldo.diaz@cetys.mx"
+}</code></pre>
+            </td>
+            <td>201</td>
+            <td>
+<pre><code>{
+    "id": 2,
+    "firstName": "Arnoldo",
+    "lastName": "Diaz",
+    "email": "arnoldo.diaz@cetys.mx"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>/api/teachers/{id}</td>
+            <td>Update existing teacher item</td>
+            <td>
+<pre><code>{
+    "id": 1,
+    "firstName": "Edwin",
+    "lastName": "Salinas",
+    "email": "edwin.salinas@cetys.mx"
+}</code></pre>
+            </td>
+            <td>204</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/api/teachers/{id}</td>
+            <td>Delete a teacher item</td>
+            <td>None</td>
+            <td>204</td>
+            <td>None</td>
+        </tr>
+    </table>
+
+    <br />
+
+    <table>
+        <tr>
+            <th colspan="6">
+                <h3>SUBJECTS API</h3>
+                <b>Returns json data about a subjects</b>
+            </th>
+        </tr>
+
+        <tr>
+            <th>Method</th>
+            <th>API</th>
+            <th>Description</th>
+            <th>Request Body</th>
+            <th>Response Code</th>
+            <th>Response Body</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/api/subjects</td>
+            <td>Get all subjects items</td>
+            <td>None</td>
+            <td>200</td>
+            <td>
+<pre><code>[
+    {
+    "id": 1,
+    "name": "Redes y Sistemas Distribuidos",
+    "keycode": "IMI",
+    "clasroom": "12008"
+    }
+]</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/api/subjects/{id}</td>
+            <td>Get a subject item by ID</td>
+            <td>None</td>
+            <td>200</td>
+            <td>
+<pre><code>{
+    "id": 1,
+    "name": "Redes y Sistemas Distribuidos",
+    "keycode": "IMI",
+    "clasroom": "12008"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/api/subjects</td>
+            <td>Add a new subject item</td>
+            <td>
+<pre><code>{
+    "name": "Arquitectura de Software",
+    "keycode": "IMI0001",
+    "classroom": "12006"
+}</code></pre>
+            </td>
+            <td>201</td>
+            <td>
+<pre><code>{
+    "id": 2,
+    "name": "Arquitectura de Software",
+    "keycode": "IMI0001",
+    "clasroom": "12006"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>/api/subjects/{id}</td>
+            <td>Update existing subject item</td>
+            <td>
+<pre><code>{
+    "id": 1,
+    "name": "Redes & Sistemas Distribuidos",
+    "keycode": "IMI",
+    "classroom": "12008"
+}</code></pre>
+            </td>
+            <td>204</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/api/subjects/{id}</td>
+            <td>Delete a subject item</td>
+            <td>None</td>
+            <td>204</td>
+            <td>None</td>
+        </tr>
+    </table>
+
+</body>
+</html>

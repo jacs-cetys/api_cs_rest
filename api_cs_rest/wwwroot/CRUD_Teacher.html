@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Teachers CRUD</title>
+    <link href="_styl/base.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Teachers CRUD</h1>
+    <h3>Add</h3>
+
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-firstname" placeholder="First Name" required />
+        <input type="text" id="add-lastname" placeholder="Last Name" required />
+        <input type="email" id="add-email" placeholder="Email" required />
+        <input type="submit" value="Add" />
+    </form>
+
+    <div id="spoiler">
+        <h3>Edit</h3>
+        <form class="my-form">
+            <input type="hidden" id="edit-id" />
+            <input type="text" id="edit-firstname" />
+            <input type="text" id="edit-lastname" />
+            <input type="email" id="edit-email" />
+            <input type="submit" value="Save" />
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="teachers"></tbody>
+    </table>
+
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="_ngin/teachers.js"></script>
+
+</body>
+</html>
+
+
+
+
