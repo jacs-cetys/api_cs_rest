@@ -14,15 +14,15 @@ namespace api_cs_rest
     {
         public static void Main(string[] args)
         {
-            // CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(args).Build().Run();
 
-            var host = new WebHostBuilder()
+            /* var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseStartup<Startup>()
                 .UseUrls("http://0.0.0.0:5000")
                 .Build();
 
-            host.Run();
+            host.Run(); */
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
