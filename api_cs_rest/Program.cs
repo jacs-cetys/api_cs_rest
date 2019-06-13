@@ -19,7 +19,8 @@ namespace api_cs_rest
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseStartup<Startup>()
-                .UseUrls("http://0.0.0.0:5000")
+                // .UseUrls("http://0.0.0.0:5000")
+                .UseUrls("http://*:5000")
                 .Build();
 
             host.Run();
